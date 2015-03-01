@@ -22,6 +22,7 @@ class MainHandler(tornado.web.RequestHandler):
   <head>
     <title>SLAMBot with Team40</title>
   	<meta charset="UTF-8">
+  	<META HTTP-EQUIV="refresh" CONTENT="5">
   </head>
   <body>
 	<style type="text/css">
