@@ -8,9 +8,9 @@ import tornado.web
 
 class ImageHandler(tornado.web.RequestHandler):
     def get(self):
-        self.set_header('Content-type', 'image/jpg')
+        self.set_header('Content-type', 'image/png')
         #self.set_header('Content-length', len(s))   
-	filename = "img.jpg"
+	filename = "img.png"
 	with open(filename) as f:
 		self.write(f.read())	
 
