@@ -26,8 +26,8 @@ class UpHandler(tornado.web.RequestHandler):
 			  </head>
 			</html>"""))
 	asdf = serial.Serial('/dev/ttyMFD1',115200)
-	asdf.write("1:5:5:5")
-	asdf.write("1:5:5:5")
+	asdf.write("0f1000f1f100")
+	asdf.write("1f1000f1f100")
 
 
 class MainHandler(tornado.web.RequestHandler):
