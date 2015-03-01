@@ -20,12 +20,12 @@ class UpHandler(tornado.web.RequestHandler):
     	def get(self):
     		ser = serial.Serial('/dev/ttyMFD1',115200)
 			self.write(unicode("""
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=/" />	
-  </head>
-</html>""")
+				<!DOCTYPE html>
+				<html>
+				  <head>
+				    <meta http-equiv="refresh" content="0; url=/" />	
+				  </head>
+				</html>""")
 			ser.write("1:5:5:5")
 			ser.write("1:5:5:5")
 
