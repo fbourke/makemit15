@@ -70,7 +70,7 @@ class MainHandler(tornado.web.RequestHandler):
 
 application = tornado.web.Application([
 	(r"/image", ImageHandler),
-	(r"/up"), UpHandler),
+	(r"/up", UpHandler),
 	(r"/", MainHandler),
 ])
 
