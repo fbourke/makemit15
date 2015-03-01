@@ -18,7 +18,6 @@ class ImageHandler(tornado.web.RequestHandler):
 
 class UpHandler(tornado.web.RequestHandler):
     	def get(self):
-    		ser = serial.Serial('/dev/ttyMFD1',115200)
 			self.write(unicode("""
 				<!DOCTYPE html>
 				<html>
@@ -26,8 +25,9 @@ class UpHandler(tornado.web.RequestHandler):
 				    <meta http-equiv="refresh" content="0; url=/" />	
 				  </head>
 				</html>""")
-			ser.write("1:5:5:5")
-			ser.write("1:5:5:5")
+		ser = serial.Serial('/dev/ttyMFD1',115200)
+		ser.write("1:5:5:5")
+		ser.write("1:5:5:5")
 
 
 class MainHandler(tornado.web.RequestHandler):
