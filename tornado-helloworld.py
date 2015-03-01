@@ -13,7 +13,7 @@ class ImageHandler(tornado.web.RequestHandler):
 
 class MainHandler(tornado.web.RequestHandler):
 	def get(self):
-		self.write("""
+		self.write(unicode("""
 <!DOCTYPE html>
 <html>
   <head>
@@ -46,7 +46,7 @@ class MainHandler(tornado.web.RequestHandler):
   </body>
 </html>
 
-""")
+"""))
 
 application = tornado.web.Application([
 	(r"/image", ImageHandler),
