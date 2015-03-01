@@ -17,17 +17,17 @@ class ImageHandler(tornado.web.RequestHandler):
 		self.write(f.read())	
 
 class UpHandler(tornado.web.RequestHandler):
-    	def get(self):
-			self.write(unicode("""
-				<!DOCTYPE html>
-				<html>
-				  <head>
-				    <meta http-equiv="refresh" content="0; url=/" />	
-				  </head>
-				</html>""")
-			ser = serial.Serial('/dev/ttyMFD1',115200)
-			ser.write("1:5:5:5")
-			ser.write("1:5:5:5")
+	def get(self):
+		self.write(unicode("""
+			<!DOCTYPE html>
+			<html>
+			  <head>
+			    <meta http-equiv="refresh" content="0; url=/" />	
+			  </head>
+			</html>""")
+	ser = serial.Serial('/dev/ttyMFD1',115200)
+	ser.write("1:5:5:5")
+	ser.write("1:5:5:5")
 
 
 class MainHandler(tornado.web.RequestHandler):
