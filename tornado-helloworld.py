@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import io
 from PIL import Image
 import tornado.ioloop
