@@ -18,6 +18,7 @@ class ImageHandler(tornado.web.RequestHandler):
 
 class UpHandler(tornado.web.RequestHandler):
     	def get(self):
+    		ser = serial.Serial('/dev/ttyMFD1',115200)
 			self.write(unicode("""
 <!DOCTYPE html>
 <html>
@@ -75,5 +76,4 @@ application = tornado.web.Application([
 
 if __name__ == "__main__":
     application.listen(8888)
-    ser = serial.Serial('/dev/ttyMFD1',115200)
     tornado.ioloop.IOLoop.instance().start()
