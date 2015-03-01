@@ -42,7 +42,7 @@ class MainHandler(tornado.web.RequestHandler):
 	  </tr>
 	  <tr>
 	    <td class="tg-031e"></td>
-	    <td class="tg-031e"></td>
+	    <td class="tg-031e">⇓</td>
 	    <td class="tg-031e"></td>
 	  </tr>
 	</table>
