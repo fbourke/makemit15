@@ -25,9 +25,9 @@ class UpHandler(tornado.web.RequestHandler):
 			    <meta http-equiv="refresh" content="0; url=/" />	
 			  </head>
 			</html>""")
-	#ser = serial.Serial('/dev/ttyMFD1',115200)
-	ser.write("1:5:5:5")
-	ser.write("1:5:5:5")
+	# asdf = serial.Serial('/dev/ttyMFD1',115200)
+	# asdf.write("1:5:5:5")
+	# asdf.write("1:5:5:5")
 
 
 class MainHandler(tornado.web.RequestHandler):
